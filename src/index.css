@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.cv-wrapper {
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  --base-font-size: 16px;
+  -webkit-box-shadow: 9px 0 31px -14px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 9px 0 31px -14px rgba(66, 68, 90, 1);
+  box-shadow: 9px 0 31px -14px rgba(66, 68, 90, 1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.top-divider {
+  border-top: 4px double #121212;
+}
+.bottom-divider {
+  border-bottom: 4px double #121212;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-name {
+  text-align: center;
+  font-size: calc(var(--base-font-size) * 1.5);
+  font-weight: 700;
+}
+
+.job-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: calc(var(--base-font-size) * 4);
+}
+.section-title {
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-size: calc(var(--base-font-size) * 1.75);
+}
+.plain-text {
+  padding: 0.5rem 0;
+  font-size: calc(var(--base-font-size) * 1.25);
+}
+
+.employment-history-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.employment-job-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: calc(var(--base-font-size) * 1.5);
+}
+.degree {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: calc(var(--base-font-size) * 1.75);
+}
+.job-company, .institution {
+  font-weight: 700;
+  font-size: calc(var(--base-font-size) * 1.5);
+  font-style: italic;
+}
+.job-duration, .degree-duration-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.job-date, .degree-duration {
+  font-weight: 700;
+  font-size: calc(var(--base-font-size) * 1.25);
+}
+.employment-history .plain-text {
+  padding: 0;
+}
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 0.5rem 0;
+}
+.education-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.degree-duration {
+  white-space: nowrap;
+}
+
+@media (max-width: 762px) {
+  .cv-wrapper {
+    max-width: 100dvw;
+    margin: 1rem;
+  }
+  .job-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: calc(var(--base-font-size) * 2.5);
+  }
+  .education-item, .employment-history-head {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}

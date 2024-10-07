@@ -1,0 +1,43 @@
+{
+  "personalDetails": {
+    "fullName": "John Doe",
+    "jobTitle": "Full Stack Developer"
+  },
+  "contactInformation": {
+    "email": "",
+    "phone": ""
+  },
+  "employmentHistory": [
+    {
+      "jobTitle": "Senior Developer",
+      "company": "Tech Solutions Inc.",
+      "startDate": "2022-09-28T07:44:32.281Z",
+      "endDate": "2024-09-28T07:44:32.281Z",
+      "responsibilities": "Led a team of developers in creating innovative web applications."
+    },
+    {
+      "jobTitle": "Junior Developer",
+      "company": "StartUp Innovations",
+      "startDate": "2020-09-28T07:44:32.281Z",
+      "endDate": "2022-09-28T07:44:32.281Z",
+      "responsibilities": "Developed and maintained client-side and server-side applications."
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Python",
+    "SQL"
+  ],
+  "education": [
+    {
+      "institution": "University of Technology",
+      "degree": "Bachelor of Science in Computer Science",
+      "startDate": "2016-09-28T07:44:32.281Z",
+      "endDate": "2020-09-28T07:44:32.282Z",
+      "description": "Focused on software engineering and web technologies."
+    }
+  ],
+  "professionalSummary": "Experienced full stack developer with a passion for creating efficient, scalable, and innovative web applications. Skilled in JavaScript, React, and Node.js, with a strong background in both front-end and back-end development."
+}
