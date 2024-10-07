@@ -53,8 +53,8 @@ export const CV = ({ data }) => {
                 <div className="personal-info top-divider">
                     {isSomeContactInfoFilled && (
                         <div className='contact-information'>
-                            <p>{data.contactInformation.email}</p>
-                            <p>{data.contactInformation.phone}</p>
+                            <a href={`mailto:${data.contactInformation.email}`}>{data.contactInformation.email}</a>
+                            <a href={`tel:${data.contactInformation.phone}`}>{data.contactInformation.phone}</a>
                         </div>
                     )}
                     <h1 className='full-name'>{data.personalDetails.fullName}</h1>

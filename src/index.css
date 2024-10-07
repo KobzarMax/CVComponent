@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  color: #121212;
 }
 
 .cv-wrapper {
@@ -30,6 +31,10 @@
   justify-content: center;
   gap: 12px;
   font-size: calc(var(--base-font-size) * 1.5);
+}
+
+.contact-information a {
+  text-decoration: none;
 }
 
 .personal-info {
