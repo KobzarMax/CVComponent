@@ -50,13 +50,13 @@ export const CV = ({ data }) => {
     return (
         <div className="cv-wrapper" ref={wrapperRef}>
             <div className="cv-inner" ref={innerRef}>
-                {isSomeContactInfoFilled && (
-                    <div className='contact-information top-divider'>
-                        <p>{data.contactInformation.email}</p>
-                        <p>{data.contactInformation.phone}</p>
-                    </div>
-                )}
                 <div className="personal-info top-divider">
+                    {isSomeContactInfoFilled && (
+                        <div className='contact-information'>
+                            <p>{data.contactInformation.email}</p>
+                            <p>{data.contactInformation.phone}</p>
+                        </div>
+                    )}
                     <h1 className='full-name'>{data.personalDetails.fullName}</h1>
                     <p className='job-title'>{data.personalDetails.jobTitle}</p>
                 </div>
