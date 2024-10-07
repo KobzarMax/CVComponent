@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.25;
   color: #121212;
 }
 
@@ -31,6 +31,7 @@
   justify-content: center;
   gap: 12px;
   font-size: calc(var(--base-font-size) * 1.5);
+  flex-wrap: wrap;
 }
 
 .contact-information a {
@@ -46,14 +47,15 @@
 
 .full-name {
   text-align: center;
-  font-size: calc(var(--base-font-size) * 1.5);
+  font-size: calc(var(--base-font-size) * 5);
   font-weight: 700;
+  line-height: 1;
 }
 
 .job-title {
   text-align: center;
-  font-weight: 700;
-  font-size: calc(var(--base-font-size) * 4);
+  font-size: calc(var(--base-font-size) * 1.5);
+  font-style: italic;
 }
 .section-title {
   text-align: center;
