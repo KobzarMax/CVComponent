@@ -15,20 +15,25 @@ export const CV = ({ data }) => {
 
     const adjustFontSizeToFit = () => {
         const maxHeight = window.innerHeight; // Full viewport height
-        let currentFontSize = 16; // Default starting font size (px)
-
-        // Get the wrapper element
+        const maxWidth = window.innerWidth; // Full viewport height
         const wrapperElement = wrapperRef.current;
         const innerElement = innerRef.current;
+        let currentFontSize = 12; // Default starting font size (px)
 
-        // Set initial font size to the CSS variable
-        wrapperElement.style.setProperty('--base-font-size', `${currentFontSize}px`);
+        // Get the wrapper element
+        if (maxWidth > 768) {
+            currentFontSize = 16; // Default starting font size (px)
 
-        // Continuously decrease font size until the content fits
-        while (innerElement.scrollHeight > maxHeight && currentFontSize > 10) {
-            currentFontSize -= 1;
+            // Set initial font size to the CSS variable
             wrapperElement.style.setProperty('--base-font-size', `${currentFontSize}px`);
+
+            // Continuously decrease font size until the content fits
+            while (innerElement.scrollHeight > maxHeight && currentFontSize > 12) {
+                currentFontSize -= 1;
+                wrapperElement.style.setProperty('--base-font-size', `${currentFontSize}px`);
+            }
         }
+        wrapperElement.style.setProperty('--base-font-size', `${currentFontSize}px`);
     };
 
     useEffect(() => {
@@ -53,8 +58,9 @@ export const CV = ({ data }) => {
                 <div className="personal-info top-divider">
                     {isSomeContactInfoFilled && (
                         <div className='contact-information'>
-                            <a href={`mailto:${data.contactInformation.email}`}>{data.contactInformation.email}</a>
-                            <a href={`tel:${data.contactInformation.phone}`}>{data.contactInformation.phone}</a>
+                            <p className='contact-information-item'>{data.contactInformation.address}</p>
+                            <a className='contact-information-item' href={`mailto:${data.contactInformation.email}`}>{data.contactInformation.email}</a>
+                            <a className='contact-information-item' href={`tel:${data.contactInformation.phone}`}>{data.contactInformation.phone}</a>
                         </div>
                     )}
                     <h1 className='full-name'>{data.personalDetails.fullName}</h1>
@@ -81,17 +87,26 @@ export const CV = ({ data }) => {
                                     <p className='job-company'>{employment.company}
                                     </p>
                                 </div>
-                                <div className='job-duration'>
-                                    <p className='job-date'>{formatDate(employment.startDate)}
-                                    </p>
-                                    -
-                                    <p className='job-date'>{formatDate(employment.endDate)}
+                                <div className='duration-location'>
+                                    <div className='job-duration'>
+                                        <p className='job-date'>{formatDate(employment.startDate)}
+                                        </p>
+                                        -
+                                        <p className='job-date'>{formatDate(employment.endDate)}
+                                        </p>
+                                    </div>
+                                    <p className='location'>
+                                        {employment.location}
                                     </p>
                                 </div>
                             </div>
-                            <p className='responsibilities plain-text'>
-                                {employment.responsibilities}
-                            </p>
+                            <ul>
+                                {employment.responsibilities.map((responsibility, index) => (
+                                    <li key={index} className='responsibilities plain-text'>
+                                        {responsibility}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -110,26 +125,65 @@ export const CV = ({ data }) => {
                     {data.education.map((educationItem, index) => (
                         <div key={index} className="education">
                             <div className='education-item'>
-                                <p className='degree'>{educationItem.degree}
-                                </p>
+                                <div className="degree-institution">
+                                    <p className='degree'>{educationItem.degree}</p>
+                                    <p className='institution'>{educationItem.institution}</p>
+                                </div>
+                                <div className='duration-location'>
                                 <div className='degree-duration-wrapper'>
-                                    <span className='degree-duration'>{formatDate(educationItem.startDate)}
-                                    </span>
-                                    -
-                                    <span className='degree-duration'>{formatDate(educationItem.endDate)}
-                                    </span>
+                                        <span className='degree-duration'>{formatDate(educationItem.startDate)}
+                                        </span>
+                                        -
+                                        <span className='degree-duration'>{formatDate(educationItem.endDate)}
+                                        </span>
+                                    </div>
+                                    <p className='location'>
+                                        {educationItem.location}
+                                    </p>
                                 </div>
                             </div>
                             <div className='education-item'>
-                                <p className='institution'>{educationItem.institution}
-                                </p>
-                            </div>
-                            <div className='education-item'>
-                                <p className='education-description plain-text'>{educationItem.description}
-                                </p>
+                                <p className='education-description plain-text'>{educationItem.description}</p>
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className='courses-wrapper'>
+                    <h2 className='section-title bottom-divider'>
+                        Courses
+                    </h2>
+                    <div className="courses">
+                        {data.courses.map((course, index) => (
+                            <div key={index} className='education-item'>
+                                <div className="degree-institution">
+                                    <p className='degree'>{course.courseName}</p>
+                                    <p className='institution'>{course.institution}</p>
+                                </div>
+                                <div className='duration-location'>
+                                    <div className='degree-duration-wrapper'>
+                                        <span className='degree-duration'>{formatDate(course.startDate)}
+                                        </span>
+                                        -
+                                        <span className='degree-duration'>{formatDate(course.endDate)}
+                                        </span>
+                                    </div>
+                                    <p className='location'>
+                                        {course.location}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className='hobbies-wrapper'>
+                    <h2 className='section-title bottom-divider'>
+                        Hobbies
+                    </h2>
+                    <div className="hobbies-inner">
+                        {data.hobbies.map((hobbie, index) => (
+                            <span key={index}>{hobbie}.</span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

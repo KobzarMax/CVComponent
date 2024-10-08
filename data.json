@@ -1,43 +1,82 @@
 {
   "personalDetails": {
-    "fullName": "John Doe",
-    "jobTitle": "Full Stack Developer"
+    "fullName": "John Spring Johnson",
+    "jobTitle": "Rocket Scientist"
   },
   "contactInformation": {
-    "email": "test@test.com",
-    "phone": "+388988888888"
+    "email": "JOHN@EXAMPLE.COM",
+    "phone": "23434343434",
+    "address": "709 9TH W23RD ST, AUSTIN, USA, 55912"
   },
   "employmentHistory": [
     {
-      "jobTitle": "Senior Developer",
-      "company": "Tech Solutions Inc.",
-      "startDate": "2022-09-28T07:44:32.281Z",
-      "endDate": "2024-09-28T07:44:32.281Z",
-      "responsibilities": "Led a team of developers in creating innovative web applications."
+      "jobTitle": "Rocket Scientist",
+      "company": "NASA",
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
+      "location":"Austin",
+      "responsibilities": [
+        "Designed and tested propulsion systems, achieving a 12% increase in efficiency and reliability",
+        "Spearheaded digital transformation initiatives, optimizing workflows and enhancing productivity",
+        "Implemented cutting-edge solutions, driving significant operational improvements",
+        "Pioneered advanced propulsion systems, driving a 12% boost in efficiency",
+        "Led digital transformation, streamlining workflows for enhanced productivity",
+        "Conducted rigorous analyses of spacecraft systems, identifying critical areas for improvement",
+        "Implemented data-driven solutions, elevating mission success rates",
+        "Fostered cross-functional partnerships, aligning engineering teams with mission objectives",
+        "Facilitated knowledge sharing, accelerating project timelines",
+        "Conceptualized next-gen space exploration technologies, pushing boundaries of current capabilities",
+        "Developed strategic roadmaps for future missions."
+      ]
     },
     {
-      "jobTitle": "Junior Developer",
-      "company": "StartUp Innovations",
-      "startDate": "2020-09-28T07:44:32.281Z",
-      "endDate": "2022-09-28T07:44:32.281Z",
-      "responsibilities": "Developed and maintained client-side and server-side applications."
+      "jobTitle": "Jet Propulsion Engineer",
+      "company": "Lockheed Martin",
+      "startDate": "2022-01-01",
+      "endDate": "2023-02-01",
+      "location":"Warsaw",
+      "responsibilities": [
+        "Spearheaded project management initiatives, delivering measurable results and optimizing team efficiency",
+        "Implemented streamlined processes, reducing turnaround times",
+        "Designed cutting-edge propulsion systems for next-gen aircraft, enhancing fuel efficiency and reducing environmental impact",
+        "Led cross-functional teams to prototype success",
+        "Conducted rigorous performance analyses on jet engines, identifying critical areas for improvement",
+        "Developed data-driven solutions, significantly boosting thrust-to-weight ratios",
+        "Optimized engine manufacturing processes, slashing production time and costs",
+        "Implemented lean methodologies, resulting in substantial savings and improved product quality."
+      ]
     }
   ],
   "skills": [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Python",
-    "SQL"
+    "Project Management",
+    "Data Analysis",
+    "Cross-Functional Leadership",
+    "Lean Methodologies",
+    "Performance Optimization",
+    "Strategic Planning",
+    "Digital Transformation"
   ],
   "education": [
     {
-      "institution": "University of Technology",
-      "degree": "Bachelor of Science in Computer Science",
-      "startDate": "2016-09-28T07:44:32.281Z",
-      "endDate": "2020-09-28T07:44:32.282Z",
-      "description": "Focused on software engineering and web technologies."
+      "institution": "Harvard University",
+      "degree": "Bachelor's Degree in Physics",
+      "startDate": "2015-01-01",
+      "endDate": "2021-01-01",
+      "location":"Warsaw",
+      "description": "Graduated with honors"
     }
   ],
-  "professionalSummary": "Experienced full stack developer with a passion for creating efficient, scalable, and innovative web applications. Skilled in JavaScript, React, and Node.js, with a strong background in both front-end and back-end development."
+  "courses": [
+    {
+      "courseName": "Advanced Rocket Propulsion Systems",
+      "institution": "Institute of Space Sciences",
+      "location":"Boston",
+      "startDate": "2014-01-01",
+      "endDate": "2015-01-01"
+    }
+  ],
+  "professionalSummary": "Rocket Scientist with 2 years of experience in designing and testing advanced propulsion systems, achieving notable efficiency improvements. Demonstrates a proven track record in digital transformation and cross-functional leadership, driving operational enhancements and aligning teams with mission objectives. Passionate about pioneering next-gen space exploration technologies and developing strategic roadmaps for future missions.",
+  "hobbies": [
+    "Landscape and nature photography"
+  ]
 }
